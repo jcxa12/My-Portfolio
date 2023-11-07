@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --First:#95a1a1;
+  --second: #cad2c5;
+  --Third: #4a4e69;
+  --dark: #252422;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 2.5;
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  padding: 15px 0 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background-color: var(--Third);
+}
+
+header h1 {
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  text-align:start;
+}
+
+nav a {
+  padding: 5px 10px;
+  color: var(--second);
+  margin: 10px;
+  font-size: 20px;
+  text-align:justify;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  background-size: 100% 100%;
+  color: var(--First);
+}
+
+.hero-banner {
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+  color: var(--);
+  padding: 2% 8%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+
+.hero-banner h2 {
+  background-color: var(--second);
+  color: var(--Third);
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 50px;
+  line-height: 1.2;
+  display: inline;
+}
+
+.page-wrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-section {
+  margin: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.page-section h2 {
+  flex: 0 0 20%;
+  text-align: right;
+  padding-right: 15px;
+  border-right: 4px solid var(--First);
+  font-size: 4vw;
+  line-height: 1.1;
+}
+
+.page-section div {
+  flex: 0 0 77%;
+}
+
+.bigbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.BB {
+  border: 5px solid var(--Third);
+  background-color: var(--First);
+  color: var(--dark);
+  min-height: 120px;
+  max-height: 120px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 8px;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 120%;
+  transition: all 0.5s;
+  font-size: 0.rem;
+}
+
+.BB:first-child {
+  min-height: 400px;
+  flex-basis: 100%;
+}
+
+.contact address a {
+  color: var(--Third);
+  padding: 5px;
+  text-decoration: none;
+  font-style: normal;
+  margin: 0px 5px 4px;
+}
+
+.Surf {
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+.LED {
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+.Calculator {
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+.Pastel {
+  background-image: url(../images/02-portfolio-3.jpg) 
+}
+
+.Run-buddy {
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 0 0 15px 0;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  .page-section > h2 
+  .page-section > div {
+    flex: 0 0 100%;
+  }
+
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--First);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .BB,
+  .BB:first-child {
+    flex-basis: 100%;
+  }
+  
+  .BB:first-child{
+    min-height: 150px;
+  }
+  
+  .hero-banner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact address {
+    flex-direction: column;
+    align-items: flex-end;
+}
+}
